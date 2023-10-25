@@ -18,7 +18,7 @@ const Navbar = () => {
         }, [])
     })
     return (
-        <nav className={`fixed top-0 left-0 right-0 ${sticky ? 'bg-white/60' : ''}`}>
+        <nav className={`fixed z-20 top-0 left-0 right-0 ${sticky ? 'bg-white/60' : ''}`}>
             <div className='flex justify-between items-center'>
                 <h4 className="text-4xl uppercase font-bold mx-6">
                     Al<span className="text-cyan-600">hab</span>ib

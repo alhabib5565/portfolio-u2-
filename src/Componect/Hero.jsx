@@ -21,7 +21,7 @@ const Hero = () => {
                         Fullstack Developer
                     </h4>
                     <div className='flex items-center gap-6 mt-8'>
-                        <button className='text-white cursor-pointer flex items-center gap-3 uppercase font-medium bg-gradient-to-r from-cyan-400 to-sky-700 py-2 px-4 rounded-lg hover:scale-x-105 duration-300'>resume <span><FaArrowRight size={20}/></span></button>
+                        <button className='text-white cursor-pointer flex items-center gap-3 uppercase font-medium bg-gradient-to-r from-cyan-400 to-sky-700 py-2 px-4 rounded-lg hover:scale-x-105 duration-300'>projects <span><FaArrowRight size={20}/></span></button>
 
                         <a  className='text-white cursor-pointer flex items-center gap-3 uppercase font-medium bg-gradient-to-r from-cyan-400 to-sky-700 py-2 px-4 rounded-lg hover:scale-x-105 duration-300'>resume <span><FiDownload size={20}/></span></a>
                     </div>
