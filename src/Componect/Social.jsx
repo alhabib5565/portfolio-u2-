@@ -50,10 +50,11 @@ const Social = () => {
         <div className='hidden lg:flex top-[45%] left-0 fixed '>
             <ul>
                 {
-                    links.map(({ id, child, href, style, download }) => <li key={id} className='flex justify-between items-center w-40 h-14  ml-[-105px] hover:ml-0 duration-500'>
-                        <a className={`px-4 text-lg font-semibold h-full border-b-2 w-full text-white box- flex justify-between items-center bg-gray-600 rounded-r-xl`} href={href} download={download} target="_blank" rel="noreferrer">
-                            {/* <span className='uppercase'>Github</span>
-                            <FaGithub size={25}></FaGithub> */}
+                    links.map(({ id, child, href, style, download }) => <li key={id} 
+                    className='flex justify-between items-center w-40 h-14 transition ease-in-out  translate-x-[-105px] hover:translate-x-0 duration-500'>
+                        <a 
+                        className={`px-4 text-lg font-semibold h-full border-b-2 w-full text-white box- flex justify-between items-center bg-gray-600 rounded-r-xl`}
+                         href={href} download={download} target="_blank" rel="noreferrer">
                             {child}
                         </a>
                     </li>)

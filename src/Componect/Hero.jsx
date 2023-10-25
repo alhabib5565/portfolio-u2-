@@ -5,7 +5,7 @@ import {FiDownload} from 'react-icons/fi'
 const Hero = () => {
     return (
         <section className='min-h-screen flex py-16 px-4 md:flex-row flex-col items-center'>
-            <div className="flex-1 flex items-center justify-center h-full mt-10">
+            <div className="flex-1 transition scale-100 ease-out duration-500 flex items-center justify-center h-full mt-10">
                 <img src={hero} alt="" className="md:h-3/5 h-full object-cover rounded-full" />
             </div>
             <div className="flex-1 mt-10 md:mt-0">
