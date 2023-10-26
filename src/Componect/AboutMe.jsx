@@ -5,7 +5,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import {FiDownload} from 'react-icons/fi'
 const AboutMe = () => {
     return (
-        <div className='mt-10 px-4 max-w-6xl mx-auto'>
+        <div className='my-10 px-4 max-w-6xl mx-auto'>
             <SectionTitle description='My introduction' sectionTitle='About' colorText='Me' />
             <div className='flex flex-col-reverse items-center gap-8 md:flex-row mt-14'>
                 <div className='flex-1'>
