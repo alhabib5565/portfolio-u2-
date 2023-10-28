@@ -5,7 +5,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import {FiDownload} from 'react-icons/fi'
 const AboutMe = () => {
     return (
-        <div className='my-10 px-4 max-w-6xl mx-auto'>
+        <div className='my-10 px-4 max-w-6xl w-full mx-auto overflow-hidden'>
             <SectionTitle description='My introduction' sectionTitle='About' colorText='Me' />
             <div className='flex flex-col-reverse items-center gap-8 md:flex-row mt-14'>
                 <div className='flex-1'>
@@ -14,9 +14,9 @@ const AboutMe = () => {
                         experiences. My goal is to join a dynamic team, learn, grow, and contribute to building user-centric web applications.I stay up-to-date with the latest web technologies through continuous learning and practice.
                     </p>
                     <div className='flex items-center gap-6 mt-8'>
-                        <button className='text-white cursor-pointer flex items-center gap-3 uppercase font-medium bg-gradient-to-r from-cyan-400 to-sky-700 py-2 px-4 rounded-lg hover:scale-x-105 duration-300'>Contact Me <span><FaArrowRight size={20}/></span></button>
+                        <button className='text-white cursor-pointer flex items-center gap-3 uppercase font-medium bg-gradient-to-r from-cyan-400 to-sky-700 py-2 px-3 sm:px-4 rounded-lg hover:scale-x-105 duration-300'>Contact Me <span><FaArrowRight size={20}/></span></button>
 
-                        <a  className='text-white cursor-pointer flex items-center gap-3 uppercase font-medium bg-gradient-to-r from-cyan-400 to-sky-700 py-2 px-4 rounded-lg hover:scale-x-105 duration-300'>resume <span><FiDownload size={20}/></span></a>
+                        <a  className='text-white cursor-pointer flex items-center gap-3 uppercase font-medium bg-gradient-to-r from-cyan-400 to-sky-700 py-2 px-3 sm:px-4 rounded-lg hover:scale-x-105 duration-300'>resume <span><FiDownload size={20}/></span></a>
                     </div>
                 </div>
                 <div className='flex-1 flex justify-center items-center relative aboutImg'>

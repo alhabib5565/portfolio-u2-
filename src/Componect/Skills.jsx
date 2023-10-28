@@ -20,98 +20,98 @@ const Skills = () => {
             id: 1,
             src: html,
             title: "HTML",
-            style: "orange-500",
+            style: "shadow-orange-500",
             experties: 'Expert'
         },
         {
             id: 2,
             src: css,
             title: "CSS",
-            style: "blue-500",
+            style: "shadow-blue-500",
             experties: 'Expert'
         },
         {
             id: 3,
             src: tailwind,
             title: "Tailwind",
-            style: "sky-400",
+            style: "shadow-sky-400",
             experties: 'Expert'
         },
         {
             id: 4,
             src: bootrap,
             title: "Bootrap",
-            style: "blue-400",
+            style: "shadow-blue-400",
             experties: 'Expert'
         },
         {
             id: 5,
             src: javascript,
             title: "JavaScript",
-            style: "yellow-500",
+            style: "shadow-yellow-500",
             experties: 'Comfortable'
         },
         {
             id: 6,
             src: reactImage,
             title: "React",
-            style: "blue-600",
+            style: "shadow-blue-600",
             experties: 'Expert'
+        },
+        {
+            id: 7,
+            src: redux,
+            title: "Redux",
+            style: "shadow-purple-400",
+            experties: 'Comfortable'
         },
         {
             id: 9,
             src: github,
             title: "GitHub",
-            style: "gray-400",
+            style: "shadow-gray-400",
             experties: 'Comfortable'
         },
         {
             id: 10,
             src: firebase,
             title: "Firebase",
-            style: "yellow-400",
+            style: "shadow-yellow-400",
             experties: 'Authentication'
         },
         {
             id: 12,
-            src: redux,
-            title: "Redux",
-            style: "purple-400",
-            experties: 'Comfortable'
-        },
-        {
-            id: 8,
             src: expressjs,
             title: "Express Js",
-            style: "yellow-400",
-            experties: 'Comfortable'
-        },
-        {
-            id: 11,
-            src: node,
-            title: "Node Js",
-            style: "green-400",
+            style: "shadow-yellow-400",
             experties: 'Comfortable'
         },
         {
             id: 13,
+            src: node,
+            title: "Node Js",
+            style: "shadow-green-400",
+            experties: 'Comfortable'
+        },
+        {
+            id: 14,
             src: mongodb,
             title: "MongoDB",
-            style: "green-400",
+            style: "shadow-green-400",
             experties: 'Comfortable'
         },
     ];
 
     return (
 
-        <div className="max-w-6xl mx-auto p-4 mt-8 md:mt-16 lg:mt-24 text-white">
+        <div className="max-w-6xl w-full mx-auto p-4 mt-8 md:mt-16 lg:mt-24 text-white">
             <SectionTitle description='These are the technologies I"ve worked with' sectionTitle='My' colorText='Skills' />
 
-            <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center mt-14 sm:px-0">
+            <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center mt-14 sm:px-0">
                 {techs.map(({ id, src, title, style, experties }) =>
-                    <div key={id} className="group w-full h-[150px] [perspective:1000px]">
+                    <div key={id} className="group mx-auto w-full h-[150px] [perspective:1000px]">
                         <div className={`w-full h-full relative rounded-md shadow-md transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] 
-                    shadow-${style}`} key={id}>
+                    ${style}`} key={id}>
                             <div
                                 className='absolute inset-0'
                             >

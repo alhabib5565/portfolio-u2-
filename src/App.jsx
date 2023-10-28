@@ -5,6 +5,7 @@ import Hero from './Componect/Hero';
 import Social from './Componect/Social';
 import AboutMe from './Componect/AboutMe';
 import Skills from './Componect/Skills';
+import Projects from './Componect/Projects';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <ChatBot/>
       <AboutMe/>
       <Skills/>
+      <Projects/>
     </div>
   );
 };
