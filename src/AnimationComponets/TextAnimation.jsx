@@ -1,11 +1,14 @@
-import React from 'react';
-import { motion } from "framer-motion"
+import React, { useRef } from 'react';
+import { motion, useInView } from "framer-motion"
 
-const TextAnimation = ({ children, delay }) => {
+const TextAnimation = ({ children, delay, direction }) => {
+    const ref = useRef(null)
+    const inView = useInView(ref)
     return (
         <motion.div
-            initial={{ opacity: .5, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
+            ref={ref}
+            initial={{ opacity: .5, x: direction }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: .5, x: direction }}
             transition={{ duration: delay }}
         >
             {children}

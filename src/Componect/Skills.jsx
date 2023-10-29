@@ -13,6 +13,7 @@ import firebase from "../assets/firebase.png";
 import redux from '../assets/redux.svg'
 import SectionTitle from "./SectionTitle";
 import mongodb from '../assets/mongodb.svg'
+import ImageOrCardAnmtn from "../AnimationComponets/ImageOrCardAnmtn";
 
 const Skills = () => {
     const techs = [
@@ -109,7 +110,8 @@ const Skills = () => {
 
             <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center mt-14 sm:px-0">
                 {techs.map(({ id, src, title, style, experties }) =>
-                    <div key={id} className="group mx-auto w-full h-[150px] [perspective:1000px]">
+                <ImageOrCardAnmtn key={id}>
+                        <div className="group mx-auto w-full h-[150px] [perspective:1000px]">
                         <div className={`w-full h-full relative rounded-md shadow-md transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] 
                     ${style}`} key={id}>
                             <div
@@ -126,6 +128,7 @@ const Skills = () => {
                             </div>
                         </div>
                     </div>
+                </ImageOrCardAnmtn>
                 )}
             </div>
         </div>

@@ -5,6 +5,7 @@ import tripsure from '../assets/projects/tripsure.png'
 import eclass from '../assets/projects/eclass.png'
 import robotToy from '../assets/projects/toyrobot.png'
 import collage_addmission from '../assets/projects/collage_addmision.png'
+import ImageOrCardAnmtn from '../AnimationComponets/ImageOrCardAnmtn';
 const Projects = () => {
 
     const projects = [
@@ -52,7 +53,9 @@ const Projects = () => {
 
             <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center gap-6 '>
                 {
-                    projects.map((project, index) => <div key={index} className="h-full w-full max-w-lg mx-auto  p-3 sl:p-4 bg-gray-700 rounded-xl">
+                    projects.map((project, index) => 
+                   <ImageOrCardAnmtn key={index} >
+                     <div className="h-full w-full max-w-lg mx-auto  p-3 sl:p-4 bg-gray-700 rounded-xl">
                         <div className='h-[300px] overflow-hidden'>
                             <img src={project.image} alt="" className="rounded-lg w-full" />
                         </div>
@@ -82,7 +85,9 @@ const Projects = () => {
                                 Live Demo
                             </a>
                         </div>
-                    </div>)
+                    </div>
+                   </ImageOrCardAnmtn>
+                    )
                 }
             </div>
         </div>
