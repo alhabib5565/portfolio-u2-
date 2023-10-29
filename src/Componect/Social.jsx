@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaMailBulk } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
+import {motion} from 'framer-motion'
 const Social = () => {
 
     const links = [
@@ -52,11 +53,17 @@ const Social = () => {
                 {
                     links.map(({ id, child, href, style, download }) => <li key={id} 
                     className='flex justify-between items-center w-40 h-14 transition ease-in-out  translate-x-[-105px] hover:translate-x-0 duration-500'>
-                        <a 
+                        <motion.a 
+                               whileHover={{
+                                scale: 1.1,
+                                transition: { duration: .2 },
+                                zIndex: '100px'
+                            }}
+                            whileTap={{ scale: .9, rotate: "-10deg"}}
                         className={`px-4 text-lg font-semibold h-full border-b-2 w-full text-white box- flex justify-between items-center bg-gray-700 rounded-r-xl`}
                          href={href} download={download} target="_blank" rel="noreferrer">
                             {child}
-                        </a>
+                        </motion.a>
                     </li>)
                 }
 

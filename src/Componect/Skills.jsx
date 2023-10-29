@@ -40,7 +40,7 @@ const Skills = () => {
         {
             id: 4,
             src: bootrap,
-            title: "Bootrap",
+            title: "Bootstrap",
             style: "shadow-blue-400",
             experties: 'Expert'
         },

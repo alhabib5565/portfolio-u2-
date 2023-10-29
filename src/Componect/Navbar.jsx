@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 const Navbar = () => {
     const [sticky, setSticky] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
+    const [hidden, setHidden] = useState(false)
 
     const menuLinks = [
         { name: "HOME", link: "#home" },
@@ -17,8 +19,24 @@ const Navbar = () => {
             window.scrollY > 0 ? setSticky(true) : setSticky(false);
         }, [])
     })
+    const { scrollY } = useScroll();
+    useMotionValueEvent(scrollY, "change",(latestValue) => {
+         const previous = scrollY.getPrevious()
+         if (latestValue > previous && previous > 120) {
+            setHidden(true)
+         }else{
+            setHidden(false)
+         }
+    })  
     return (
-        <nav className={`fixed z-20 top-0 left-0 right-0 ${sticky ? 'bg-white/60' : ''}`}>
+        <motion.nav
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: '-100%' }
+            }}
+            animate={hidden ? 'hidden' : 'visible'}
+            transition={{ duration: .35, ease: 'easeInOut' }}
+            className={`fixed z-20 top-0 left-0 right-0 ${sticky ? 'bg-white/60' : ''}`}>
             <div className='flex justify-between items-center'>
                 <h4 className="text-4xl uppercase font-bold mx-6">
                     Al<span className="text-cyan-600">hab</span>ib
@@ -41,7 +59,7 @@ const Navbar = () => {
                     }
                 </div>
 
-                <div className={`absolute duration-500 md:hidden w-full top-[46px] ${menuOpen ? 'right-0 ': '-right-[100%]'}`}>
+                <div className={`absolute duration-500 md:hidden w-full top-[46px] ${menuOpen ? 'right-0 ' : '-right-[100%]'}`}>
 
                     <ul className={` box-border bg-cyan-950  w-full rounded-b-xl py-6 duration-1000
                    `}>
@@ -54,7 +72,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 
