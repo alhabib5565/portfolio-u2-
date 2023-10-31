@@ -1,11 +1,11 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import im from '../assets/portfolio hero image.jpg'
 import tripsure from '../assets/projects/tripsure.png'
 import eclass from '../assets/projects/eclass.png'
 import robotToy from '../assets/projects/toyrobot.png'
 import collage_addmission from '../assets/projects/collage_addmision.png'
 import ImageOrCardAnmtn from '../AnimationComponets/ImageOrCardAnmtn';
+import ProjectButton from '../AnimationComponets/ProjectButton';
 const Projects = () => {
 
     const projects = [
@@ -27,15 +27,15 @@ const Projects = () => {
             technologies: ['HTML', "Tailwind", "daisyUI", "Firebase", "React", "Express", "Mongodb", 'JWT', "TanStack Query"],
             image: eclass
         },
-        {
-            name: "Toy Robot",
-            categroy: 'front end',
-            live_link: 'https://ema-john-simple-with-fir-a29b0.web.app/',
-            clien_code: 'https://github.com/alhabib5565/toy_robot_client/',
-            server_code: 'https://github.com/alhabib5565/toy_robot_server/',
-            technologies: ['HTML', "Tailwind", "daisyUI", "Firebase", "React", "Express", "Mongodb"],
-            image: robotToy
-        },
+        // {
+        //     name: "Toy Robot",
+        //     categroy: 'front end',
+        //     live_link: 'https://ema-john-simple-with-fir-a29b0.web.app/',
+        //     clien_code: 'https://github.com/alhabib5565/toy_robot_client/',
+        //     server_code: 'https://github.com/alhabib5565/toy_robot_server/',
+        //     technologies: ['HTML', "Tailwind", "daisyUI", "Firebase", "React", "Express", "Mongodb"],
+        //     image: robotToy
+        // },
         {
             name: "Collage Admission",
             categroy: 'front end',
@@ -48,45 +48,38 @@ const Projects = () => {
     ]
 
     return (
-        <div className='max-w-6xl mx-auto w-full p-4 mt-8 md:mt-16 lg:mt-24'>
+        <div name='projects' className='max-w-6xl mx-auto w-full p-4 mt-8 md:mt-16 lg:mt-24'>
             <SectionTitle description='My awesome works' sectionTitle='My' colorText='Porjects'></SectionTitle>
 
             <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center gap-6 '>
                 {
-                    projects.map((project, index) => 
-                   <ImageOrCardAnmtn key={index} >
-                     <div className="h-full w-full max-w-lg mx-auto  p-3 sl:p-4 bg-gray-700 rounded-xl">
-                        <div className='h-[300px] overflow-hidden'>
-                            <img src={project.image} alt="" className="rounded-lg w-full" />
-                        </div>
-                        <h3 className="text-xl my-4">{project.name}</h3>
-                        <div className="flex gap-2 sm:gap-3">
-                            <a
-                                href={project.clien_code}
-                                target="_blank"
-                                className="bg-gray-800 hover:bg-gray-600 text-cyan-600 text-sm font-semibold duration-200 py-1 px-2 border-b-4 border-gray-500 hover:text-cyan-500  rounded"
-                            >
-                                Client Code
-                            </a>
-                            {
-                                project.server_code && <a
-                                    href={project.server_code}
-                                    target="_blank"
-                                    className="bg-gray-800 hover:bg-gray-600 text-cyan-600 text-sm font-semibold duration-200 py-1 px-2 border-b-4 border-gray-500 hover:text-cyan-500 rounded"
-                                >
-                                    Server Code
-                                </a>
-                            }
-                            <a
-                                href={project.live_link}
-                                target="_blank"
-                                className="bg-gray-800 hover:bg-gray-600 text-cyan-600 text-sm font-semibold duration-200 py-1 px-2 border-b-4 border-gray-500 hover:text-cyan-500 rounded"
-                            >
-                                Live Demo
-                            </a>
-                        </div>
-                    </div>
-                   </ImageOrCardAnmtn>
+                    projects.map((project, index) =>
+                        <ImageOrCardAnmtn key={index} >
+                            <div className="group h-full w-full max-w-lg mx-auto  p-3 sl:p-4 bg-gray-700 rounded-xl">
+
+                                <div className=" relative overflow-hidden">
+                                    <div className="h-[300px] overflow-hidden">
+                                        <img className=" w-full rounded-t-xl transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={project.image} alt="" />
+                                    </div>
+
+                                    <div className="absolute inset-0 bg-gradient-to-b from-transparent  to-black group-hover:from-black/70  group-hover:to-black/70 translate-y-[100%] flex items-center justify-center flex-wrap px-3 gap-2 text-center transition-all duration-500 group-hover:translate-y-0">
+                                        {
+                                            project.technologies.map((technology, index) => <span key={index} className="duration-700 transition-all translate-x-[-100%] group-hover:translate-x-0 rounded-full bg-gray-800 px-3.5 py-2 text- capitalize text-cyan-600 shadow shadow-black/60">{technology}</span>)
+                                        }
+                                    </div>
+                                </div>
+
+                                <h1 className="text-2xl my-4 font-bold text-white">{project.name}</h1>
+                                <div className="flex gap-2  justify-between sm:gap-3">
+                                    <ProjectButton href={project.live_link} ButtonText='Live Demo' />
+                                    {
+                                        project.server_code && <ProjectButton href={project.server_code} ButtonText='Server Code' />
+                                    }
+                                    <ProjectButton href={project.clien_code} ButtonText='Client Code' />
+
+                                </div>
+                            </div>
+                        </ImageOrCardAnmtn>
                     )
                 }
             </div>

@@ -6,6 +6,7 @@ import Social from './Componect/Social';
 import AboutMe from './Componect/AboutMe';
 import Skills from './Componect/Skills';
 import Projects from './Componect/Projects';
+import Contact from './Componect/Contact';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <AboutMe/>
       <Skills/>
       <Projects/>
+      <Contact/>
     </div>
   );
 };

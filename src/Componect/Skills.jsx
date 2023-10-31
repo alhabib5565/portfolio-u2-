@@ -67,35 +67,35 @@ const Skills = () => {
             experties: 'Comfortable'
         },
         {
-            id: 9,
+            id: 8,
             src: github,
             title: "GitHub",
             style: "shadow-gray-400",
             experties: 'Comfortable'
         },
         {
-            id: 10,
+            id: 9,
             src: firebase,
             title: "Firebase",
             style: "shadow-yellow-400",
             experties: 'Authentication'
         },
         {
-            id: 12,
+            id: 10,
             src: expressjs,
             title: "Express Js",
             style: "shadow-yellow-400",
             experties: 'Comfortable'
         },
         {
-            id: 13,
+            id: 11,
             src: node,
             title: "Node Js",
             style: "shadow-green-400",
             experties: 'Comfortable'
         },
         {
-            id: 14,
+            id: 12,
             src: mongodb,
             title: "MongoDB",
             style: "shadow-green-400",
@@ -105,7 +105,7 @@ const Skills = () => {
 
     return (
 
-        <div className="max-w-6xl w-full mx-auto p-4 mt-8 md:mt-16 lg:mt-24 text-white">
+        <div name="skills" className="max-w-6xl w-full mx-auto p-4 mt-8 md:mt-16 lg:mt-24 text-white">
             <SectionTitle description='These are the technologies I"ve worked with' sectionTitle='My' colorText='Skills' />
 
             <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center mt-14 sm:px-0">
